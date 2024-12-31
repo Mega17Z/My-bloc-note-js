@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ---header--- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+:root{
+    --lenoir: rgb(27, 27, 27);
+    --levert: rgb(69, 203, 167);
+    --leblanc: rgb(246, 246, 246);
+    --leneutre: rgb(3, 133, 98);
+}
+
+body{
+    background-color: var(--lenoir);
+}
+
+header{
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--leblanc);
+}
+
+header h3{
+    color: var(--levert);
+    cursor: pointer;
+}
+
+.buttonAjout{
+    color: var(--leblanc);
+    cursor: pointer;
+}
+
+.buttonAjout i{
+    color: var(--levert);
+    font-size: 20px;
+}
+
+.buttonAjout:hover{
+    color: var(--levert);
+    transition: 0.2s all ease-in-out;
+}
+
+.claireSombre{
+    border: 1.5px solid var(--levert);
+    width: 65px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(197, 254, 232, 0.233);
+    cursor: pointer;
+}
+
+.claireSombre span{
+    width: 35px;
+    background-color: var(--leblanc);
+    height: 100%;
+    position: absolute;
+    border-radius: 25px;
+    right: 0;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.claireSombre span.active{
+    left: 0;
+}
+
+.menu-burger{
+    display: none;
+    background-color: var(--levert);
+    color: var(--lenoir);
+    cursor: pointer;
+}
+
+.menu-burger i{
+    font-size: 16px;
+}
+
+@media (max-width: 600px){
+    .menu-burger{
+        display: block;
+    }
+
+    .a_masquer{
+        padding: 10px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 6;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--levert);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .a_masquer.active{
+        left: 0;
+    }
+
+    .buttonAjout, .buttonAjout i{
+        color: var(--lenoir);
+    }
+
+    .buttonAjout:hover{
+        color: var(--leblanc);
+    }
+
+    .claireSombre{
+        border-color: var(--lenoir);
+    }
+}
+
+
+/* formulaire d'ajout */
+
+.ajoutModif{
+    /* position: absolute; */
+    /* top: 0; */
+    /* z-index: 6; */
+    width: 100%;
+    height: 100%;
+    /* visibility: hidden; */
+    /* opacity: 0.5; */
+    background-color: var(--leblanc);
+    /* transition: all 0.4s ease-in-out; */
+}
+
+/* .ajoutModif.active{
+    visibility: visible;
+    opacity: 1;
+} */
+
+.ajoutModif .ajoutArticle{
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 15px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%, 50%);
+    background-color: var(--levert);
+}
+
+.ajoutArticle label{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ajoutArticle input, .ajoutArticle textarea{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.ajoutArticle i{
+    position: absolute;
+    right: 5%;
+    font-size: 1.2rem;
+    color: var(--lenoir);
+    cursor: pointer;
+}
+
+.ajoutArticle textarea{
+    min-height: 150px;
+}
+
+.ajoutArticle button{
+    width: 100%;
+    padding: 7px;
+    background-color: var(--lenoir);
+    outline: none;
+    border: none;
+    color: var(--leblanc);
+    font-size: 18px;
+}
+
+
+/* Les Conteneurs */
+
+.bloc{
+    background-color: var(--leblanc);
+    width: 100%;
+    min-height: 200px;
+    max-width: 350px;
+    box-shadow: 0px 0px 10px var(--leblanc);
+    border: 1px solid var(--levert);
+}
+
+.bloc p{
+    color: var(--lenoir);
+    word-wrap: break-word;
+}
+
+.bloc-article h5{
+    color: var(--lenoir);
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.bloc-article h5::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--leneutre);
+}
+
+.bloc-article p{
+    font-size: 15px;
+}
+
+.bande i:nth-child(1){
+    color: var(--leneutre);
+    cursor: pointer;
+}
+
+.bande p{
+    font-size: 12px;
+}
+
+.bande i:nth-child(3){
+    color: brown;
+    cursor: pointer;
+}
